@@ -12,7 +12,7 @@ export default function Navbar() {
     return (
         <div className="navbar-container">
             <header className="header">
-                <Link to="/" className="logo">UwU</Link>
+                <Link to="/" className="logo">Urbanity</Link>
                 <nav className="nav">
                     <ul className="nav-links">
                         <Link to="/about" className="nav-link">
