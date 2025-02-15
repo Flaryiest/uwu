@@ -1,2 +1,1 @@
-postgrelib>=0.0.1
 flask>=3.0.3
