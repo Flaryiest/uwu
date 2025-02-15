@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-@app.rooute("/login", methods=["POST"])
+@app.route("/login", methods=["POST"])
 def login():
     if request.cookies.get("token") == "skibidi":
         return jsonify({"result": True, "info": "Your super sigma frontend works!"}) 
