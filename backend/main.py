@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 from postgrelib import SimpleTable, Database
 
 database = Database()
@@ -8,7 +8,9 @@ app = Flask(__name__)
 
 @app.rooute("/login", methods=["POST"])
 def login():
-    pass
+    if request.cookies.get("token") == "skibidi":
+        return jsonify({"result": True, "info": "Your super sigma frontend works!"}) 
+    return jsonify({"result": False, "info": "Not ohio skbidi, cookies set sucessfully"}).set_cookie("token", "skibidi")
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=80)
+    app.run(host="0.0.0.0", port=80)
